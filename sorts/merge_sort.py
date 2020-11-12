@@ -34,4 +34,4 @@ class Solution:
         for i in range(left, right+1):
             nums[i] = temp[i-left]
 
-
+Solution().mergeSort([2,5,1,3,6,4])
