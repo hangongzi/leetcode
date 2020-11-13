@@ -10,10 +10,10 @@ class Solution:
         words = Counter(words)
 
         for i in range(n-all_len+1):
-            tmp = s[i:all_len]
+            tmp = s[i:i+all_len]
             c_tmp = []
             for j in range(0, all_len, word_len):
-                c_tmp.append(tmp[j:word_len])
+                c_tmp.append(tmp[j:j+word_len])
             if Counter(c_tmp) == words:
                 res.append(i)
 
