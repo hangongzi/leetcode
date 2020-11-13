@@ -10,16 +10,15 @@
 
 def shellSort(nums: list):
     n = len(nums)
-    gap = int(n/2)
-    while gap>0:
+    gap = n // 2
+    while gap > 0:
         for i in range(gap, n):
             temp = nums[i]
             j = i
-            while j>=gap and nums[j-gap]>temp:
-                nums[j] = nums[j-gap]
+            while j >= gap and nums[j - gap] > temp:
+                nums[j] = nums[j - gap]
                 j -= gap
             nums[j] = temp
-        gap = int(gap/2)
+        gap = gap // 2
 
     return nums
-

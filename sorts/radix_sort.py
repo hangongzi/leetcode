@@ -6,6 +6,7 @@
 2. 从指数1开始，根据位数对应数组中的数字进行桶排序
 3. 对数组a按照指数进行排序
 """
-class Solution:
-    def radixSort(self, nums:list):
-        
+
+
+def radixSort(nums: list):
+    pass
