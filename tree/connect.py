@@ -11,10 +11,12 @@ class Solution:
         if not root:
             return root
         stack = list()
-        result = [root.val, '#']
+        result = []
         stack.append(root)
         node_l = None
         while stack or node_l:
+            result.extend(list(map(lambda node: node.val, stack)))
+            result.append('#')
             while stack:
                 node_l = stack.pop()
             while node_l:
@@ -38,8 +40,8 @@ root.left = Node(2)
 root.right = Node(3)
 root.left.left = Node(4)
 root.left.right = Node(5)
-#root.right.left = Node(6)
-# root.right.right = Node(7)
+root.right.left = Node(6)
+root.right.right = Node(7)
 
 ret = Solution().connect(root)
 print(ret)
