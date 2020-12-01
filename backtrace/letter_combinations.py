@@ -14,23 +14,23 @@ class Solution:
             "8": "tuv",
             "9": "wxyz",
         }
-        groups = [phoneMap[i] for i in digits]
-        return [''.join(i) for i in itertools.product(phoneMap[i] for i in digits)]
+        # groups = [phoneMap[i] for i in digits]
+        # return [''.join(i) for i in itertools.product(*groups)]
 
-        # def backtrace(idx):
-        #     if idx == len(digits):
-        #         combinations.append(''.join(combination))
-        #     else:
-        #         digit = digits[idx]
-        #         for c in phoneMap[digit]:
-        #             combination.append(c)
-        #             backtrace(idx+1) # 前进匹配
-        #             combination.pop() # 回退
+        def backtrace(idx):
+            if idx == len(digits):
+                combinations.append(''.join(combination))
+            else:
+                digit = digits[idx]
+                for c in phoneMap[digit]:
+                    combination.append(c)
+                    backtrace(idx+1) # 前进匹配
+                    combination.pop() # 回退
 
-        # combination = []
-        # combinations = []
+        combination = []
+        combinations = []
 
-        # backtrace(0)
-        # return combinations
+        backtrace(0)
+        return combinations
 
 print(Solution().letterCombinations('23'))

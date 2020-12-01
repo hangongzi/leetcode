@@ -1,9 +1,10 @@
 def getSmallString(n: int, k: int)->str:
-    ans = []
+    res = [1 for _ in range(n)]
+    bound = (k-n)//25
+    r = (k-n)%25
+    res[n-bound-1] = 1+r
+    for i in range(n-bound, n):
+        res[i] = 26
+    return ''.join(map(lambda x: chr(x+96), res))
 
-    
-
-    ans = ''.join(map(lambda x: chr(x+96), ans[::-1]))
-    return ans
-
-print(getSmallString(5, 31))
+print(getSmallString(5, 73))
