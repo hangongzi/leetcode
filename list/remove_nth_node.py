@@ -43,3 +43,5 @@ def createList(nums: list)->ListNode:
 
 
 ret = Solution().removeNthFromEnd(createList([1,2,3,4,5]), 1)
+import list_method
+list_method.printList(ret)

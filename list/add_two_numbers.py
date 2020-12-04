@@ -4,6 +4,19 @@ class ListNode:
         self.next = next
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+        def reverseList(head: ListNode):
+            pre = head
+            cur = head.next
+            tmp = head.next.next
+
+            while cur:
+                tmp = cur.next
+                cur.next = pre
+                pre = cur
+                cur = tmp
+            head.next = None
+            return pre
+
         head = ListNode(0)
         node = head
         inc = 0

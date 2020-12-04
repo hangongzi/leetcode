@@ -39,3 +39,6 @@ class Solution:
             tail = tail
 
         return sort(head, tail)
+
+import list_method
+list_method.printList(Solution().sortList(list_method.createList([2,1,5,3,4])))
