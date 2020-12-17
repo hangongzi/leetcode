@@ -1,6 +1,6 @@
 venv
 *__pycache__*
-test.*
+test*
 .vscode
 log
 .idea
