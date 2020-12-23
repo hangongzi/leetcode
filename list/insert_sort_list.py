@@ -23,12 +23,6 @@ class Solution:
         return dumpHead.next
 
 
-def createList(l: list):
-    head = ListNode(0)
-    node = head
-    for i in l:
-        node.next = ListNode(i)
-        node = node.next
-    return head.next
+from list_method import *
 
-Solution().insertionSortList(createList([4, 2, 1, 3]))
+printList(Solution().insertionSortList(createList([4, 2, 1, 3])))

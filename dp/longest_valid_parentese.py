@@ -14,4 +14,4 @@ class Solution:
 
         return max_length
 
-print(Solution().longestValidParentheses("(()())"))
+print(Solution().longestValidParentheses("()"))

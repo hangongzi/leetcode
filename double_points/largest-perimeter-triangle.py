@@ -8,6 +8,5 @@ class Solution:
         return ans
 
 print(Solution().largestPerimeter([2,1,2]))
-            
 
-        
+

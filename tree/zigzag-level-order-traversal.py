@@ -26,6 +26,7 @@ class Solution(object):
         dfs(root, 0)
         return ans
 
+deque([1,2])
         # ans = []
         # level_list = deque()
         # flag_level_left = True

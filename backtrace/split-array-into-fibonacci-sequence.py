@@ -33,4 +33,4 @@ class Solution:
         backtrack(0)
         return ans
 
-print(Solution().splitIntoFibonacci("123"))
+print(Solution().splitIntoFibonacci("124"))

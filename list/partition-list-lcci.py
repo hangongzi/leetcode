@@ -15,6 +15,7 @@ class Solution:
                 p.val, head.val = head.val, p.val
             head = head.next
 
+        p.val, ans.next.val = ans.next.val, p.val
         return ans.next
 
         # 双指针
