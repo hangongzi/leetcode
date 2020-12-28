@@ -16,6 +16,20 @@ class Solution:
         ret.append(root.val)
         self.helper(ret, root.right)
 
+    # 迭代版中序遍历
+    def inorder(root: TreeNode):
+        ans = []
+        stack = []
+        while root or stack:
+            while root:
+                stack.append(root)
+                root = root.left
+
+            root = stack.pop()
+            ans.append(root.val)
+            root = root.right
+        return ans
+
 nums = [1,3,5,6,2,4]
 def createBinaryTree(nums):
     if not nums:

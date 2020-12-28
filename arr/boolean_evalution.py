@@ -32,4 +32,4 @@ def boolean_evalution(s: str, result: int)->int:
 
     return dp[0][len(ch)-1][result]
 
-print(boolean_evalution("1^0|0|1", 0))
+print(boolean_evalution("0&0&0&1^1|0", 1))
