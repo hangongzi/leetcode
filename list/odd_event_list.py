@@ -15,27 +15,22 @@ class Solution:
         node = head
         while node:
             if i % 2:
-                odd_l.next = ListNode(node.val)
+                odd_l.next = node # ListNode(node.val)
                 odd_l = odd_l.next
             else:
-                event_l.next = ListNode(node.val)
+                event_l.next = node # ListNode(node.val)
                 event_l = event_l.next
             node = node.next
             i += 1
-
+        
         event_l.next = odd_h.next
+        odd_l.next = None
         return event_h.next
 
 
-def createList(nums: list) -> ListNode:
-    head = ListNode(0)
-    node = head
-    for i in nums:
-        node.next = ListNode(i)
-        node = node.next
-    return head.next
+from list_method import *
 
 
 if __name__ == '__main__':
-    ret = Solution().oddEvenList(createList([]))
-    print(ret)
+    ret = Solution().oddEvenList(createList([1,2,3,4,5]))
+    printList(ret)

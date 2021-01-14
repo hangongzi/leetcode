@@ -16,15 +16,15 @@ class Solution:
         return self.num
         
     def pre_order(root: TreeNode):
-    stack = []
-    ans = []
-    while root or stack:
-        while root:
-            stack.append(root)
-            ans.append(root.val)
-            root = root.left
-        while root is None and stack:
-            root = stack.pop().right
+        stack = []
+        ans = []
+        while root or stack:
+            while root:
+                stack.append(root)
+                ans.append(root.val)
+                root = root.left
+            while root is None and stack:
+                root = stack.pop().right
 
     return ans
 

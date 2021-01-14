@@ -40,4 +40,4 @@ class Solution:
 
 from list_method import *
 
-printList(Solution().mergeInBetween(createList([0,1,2,3,4,5,6]), 0, 6, createList([10000, 10001, 10002, 10003])))
+printList(Solution().mergeInBetween(createList([0,1,2,3,4,5,6]), 1, 4, createList([10000, 10001, 10002, 10003])))
